@@ -12,32 +12,36 @@ pipeline {
     }
 //////////////////////////////////////////////////////////////////////////////////////////
     stage("Check Dependencies"){
-      script{
-        try{
-          sh 'echo "Checking for Java "'
-          sh 'java -version'
-          sh 'echo "Checking for python3"'
-          sh 'python3 --version'
-        }
-        catch(Exception e){
-          println("Error checking dependencies : ${e.message}")
+      steps{
+        script{
+          try{
+            sh 'echo "Checking for Java "'
+            sh 'java -version'
+            sh 'echo "Checking for python3"'
+            sh 'python3 --version'
+          }
+          catch(Exception e){
+            println("Error checking dependencies : ${e.message}")
+          }
         }
       }
     }
 //////////////////////////////////////////////////////////////////////////////////////////
     stage("Run tests for the iOS & Android test applications"){
-        script{
-          try{
-            def test_array = ["demo.apk", "demo.ipa"]
-            for (item in test_array){
-              sh '${env.WORKSPACE}/install_and_configure.sh -input_app_file="${env.WORKSPACE}/${item}"'
+      steps{
+          script{
+            try{
+              def test_array = ["demo.apk", "demo.ipa"]
+              for (item in test_array){
+                sh '${env.WORKSPACE}/install_and_configure.sh -input_app_file="${env.WORKSPACE}/${item}"'
+              }
+            }
+            catch(Exception e){
+              println("Error running the tests : ${e.message}")
             }
           }
-          catch(Exception e){
-            println("Error running the tests : ${e.message}")
-          }
         }
-    }
+      }
 //////////////////////////////////////////////////////////////////////////////////////////
-}
+  }
 }
