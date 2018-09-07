@@ -6,11 +6,13 @@ pipeline {
         sh 'echo "code synced from git"'
         script{
           try{
-            sh "pyht"
+            sh "python3 --version"
+            sh "java --verison"
           }
           catch (Exception e){
             sh 'echo "command not installed"'
             println (e)
+            exit 1
           }
         }
       }
