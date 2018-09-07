@@ -8,8 +8,9 @@ pipeline {
           try{
             sh "pyht"
           }
-          catch {
+          catch (Exception e){
             sh 'echo "command not installed"'
+            println (e)
           }
         }
       }
