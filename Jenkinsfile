@@ -33,8 +33,8 @@ pipeline {
             try{
               def test_array = ["demo.apk", "demo.ipa"]
               for (item in test_array){
-                sh 'echo "${env.WORKSPACE}"'
-                sh 'echo "${item}"'
+                sh "echo ${env.WORKSPACE}"
+                sh "echo ${item}"
               }
             }
             catch(Exception e){
