@@ -33,7 +33,8 @@ pipeline {
             try{
               def test_array = ["demo.apk", "demo.ipa"]
               for (item in test_array){
-                sh '${env.WORKSPACE}/install_and_configure.sh -input_app_file="${env.WORKSPACE}/${item}"'
+                sh 'echo "${env.WORKSPACE}"'
+                sh 'echo "${item}"'
               }
             }
             catch(Exception e){
