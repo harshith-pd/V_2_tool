@@ -35,6 +35,7 @@ pipeline {
               for (item in test_array){
                 sh "echo ${env.WORKSPACE}"
                 sh "echo ${item}"
+                sh "${env.WORKSPACE}/install_and_configure.sh -input_app_file=\"${env.WORKSPACE}/${item}\""
               }
             }
             catch(Exception e){
