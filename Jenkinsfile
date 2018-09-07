@@ -13,7 +13,7 @@ pipeline {
           catch (Exception e){
             sh 'echo "command not installed"'
             println (e)
-            exit 1
+            currentBuild.result = 'ABORTED'
           }
         }
       }
