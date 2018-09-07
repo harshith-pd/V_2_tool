@@ -15,9 +15,9 @@ pipeline {
       script{
         try{
           sh 'echo "Checking for Java "'
-          sh 'java -version
+          sh 'java -version'
           sh 'echo "Checking for python3"'
-          sh 'python3 --version
+          sh 'python3 --version'
         }
         catch(Exception e){
           println("Error checking dependencies : ${e.message}")
