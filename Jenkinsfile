@@ -1,22 +1,43 @@
 pipeline {
   agent any
-  triggers { pollSCM('* * * * *') }
-  stages {
-    stage('checkout') {
-      steps {
-        sh 'echo "code synced from git"'
-        script{
-          try{
-            sh "python3 --version"
-            sh "java --verison"
-          }
-          catch (Exception e){
-            sh 'echo "command not installed"'
-            println (e)
-            currentBuild.result = 'ABORTED'
-          }
+  triggers {
+    pollSCM('* * * * *')
+  }
+  stages{
+//////////////////////////////////////////////////////////////////////////////////////////
+    stage("checkout SCM"){
+      steps{
+        sh 'echo "In this stage, we will sync the code from multiple SCMs"'
+      }
+    }
+//////////////////////////////////////////////////////////////////////////////////////////
+    stage("Check Dependencies"){
+      script{
+        try{
+          sh 'echo "Checking for Java "'
+          sh 'java -version
+          sh 'echo "Checking for python3"'
+          sh 'python3 --version
+        }
+        catch(Exception e){
+          println("Error checking dependencies : ${e.message}")
         }
       }
     }
-  }
+//////////////////////////////////////////////////////////////////////////////////////////
+    stage("Run tests for the iOS & Android test applications"){
+        script{
+          try{
+            def test_array = ["demo.apk", "demo.ipa"]
+            for (item in test_array){
+              sh '${env.WORKSPACE}/install_and_configure.sh -input_app_file="${env.WORKSPACE}/${item}"'
+            }
+          }
+          catch(Exception e){
+            println("Error running the tests : ${e.message}")
+          }
+        }
+    }
+//////////////////////////////////////////////////////////////////////////////////////////
+}
 }
