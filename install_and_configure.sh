@@ -31,7 +31,8 @@
 #     usage="$(basename "$0") -input_app_file=<input file location> -input_source_code=<input source code>"
      usage="$(basename "$0") -input_app_file=<input file location>"
 
-     WORKSPACE=$(dirname "$0")
+     WORKSPACE=$( dirname $(dirname "$(pwd)/$0") )
+     echo $WORKSPACE
      TMP_FOLDER_LOCATION="${WORKSPACE}/.tmp"
      SCRIPTS_FOLDER="${WORKSPACE}/Scripts"
      TOOLS_FOLDER="${WORKSPACE}/Tools"
@@ -147,8 +148,8 @@ get_ios_app_name () {
     unzip "$app_file" -d "$TMP_FOLDER_LOCATION" 2>/dev/null 1>/dev/null || handle_error "App unzip failed"
 
     info_plist=$(ls ${TMP_FOLDER_LOCATION}/Payload/*.app/Info.plist)
-    app_name=$( defaults read "$info_plist" CFBundleExecutable )
-    if [[ "$app_name" = *"does not exist"* ]]
+    app_name=$( /usr/libexec/PlistBuddy -c "Print:CFBundleExecutable" "$info_plist" )
+    if [ $? -ne 0 ]
     then
         echo "App name could not be determined"
     fi
@@ -184,6 +185,7 @@ write_generic_folder_structure () {
 create_ios_app_instance_folder () {
     app_file="$1"
     app_name=$( get_ios_app_name "$app_file" )
+
     echo "APP_NAME = \"$app_name\"\n" >> "$TMP_FOLDER_LOCATION"/tmp.txt
     date_time=$( date +"%m_%d_%Y_%H_%M_%S" )
 
@@ -192,7 +194,7 @@ create_ios_app_instance_folder () {
         KEY="${folder_name%%:*}"
         VALUE="${folder_name#*:}"
 
-        mkdir -p "${TEST_RUN_FOLDER}/$app_name/$date_time/$VALUE" 2>/dev/null 1>/dev/null
+        mkdir -p "${TEST_RUN_FOLDER}/$app_name/$date_time/$VALUE"
         echo "$KEY = \"${TEST_RUN_FOLDER}/$app_name/$date_time/$VALUE\"\n" >> "$TMP_FOLDER_LOCATION"/tmp.txt
     done
 

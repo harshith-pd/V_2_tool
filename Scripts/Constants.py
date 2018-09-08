@@ -95,28 +95,45 @@ PDF_LIST =['pdf_related_files/firstpage.pdf', 'pdf_related_files/confidentiality
  
  
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 ########################################## 
-APP_NAME = "com.ibm.android.analyzer.test"
+APP_NAME = "Altoro-App"
 
-INPUT_FOLDER = "/Users/digitalsecurity/.jenkins/workspace/test/test_run/com.ibm.android.analyzer.test/09_06_2018_17_42_29/input"
+INPUT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_15_12_32/input"
 
-APKTOOL_OUTPUT_FOLDER = "/Users/digitalsecurity/.jenkins/workspace/test/test_run/com.ibm.android.analyzer.test/09_06_2018_17_42_29/output/apktool"
+OUTPUT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_15_12_32/output"
 
-ENJARIFY_OUTPUT_FOLDER = "/Users/digitalsecurity/.jenkins/workspace/test/test_run/com.ibm.android.analyzer.test/09_06_2018_17_42_29/output/enjarify"
+LOGS_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_15_12_32/logs"
 
-LOGS_FOLDER = "/Users/digitalsecurity/.jenkins/workspace/test/test_run/com.ibm.android.analyzer.test/09_06_2018_17_42_29/logs"
+REPORT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_15_12_32/report"
 
-REPORT_FOLDER = "/Users/digitalsecurity/.jenkins/workspace/test/test_run/com.ibm.android.analyzer.test/09_06_2018_17_42_29/report"
+CONFIG_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_15_12_32/config"
 
-CONFIG_FOLDER = "/Users/digitalsecurity/.jenkins/workspace/test/test_run/com.ibm.android.analyzer.test/09_06_2018_17_42_29/config"
+TEST_RUN_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run"
 
-TEST_RUN_FOLDER = "/Users/digitalsecurity/.jenkins/workspace/test/test_run"
+CONFIG_ROOT_FOLDER = "/Users/digitalsecurity/Documents/v2/config"
 
-CONFIG_ROOT_FOLDER = "/Users/digitalsecurity/.jenkins/workspace/test/config"
+SCRIPTS_FOLDER = "/Users/digitalsecurity/Documents/v2/Scripts"
 
-SCRIPTS_FOLDER = "/Users/digitalsecurity/.jenkins/workspace/test/Scripts"
+TOOLS_FOLDER = "/Users/digitalsecurity/Documents/v2/Tools"
 
-TOOLS_FOLDER = "/Users/digitalsecurity/.jenkins/workspace/test/Tools"
-
-TMP_FOLDER = "/Users/digitalsecurity/.jenkins/workspace/test/.tmp"
-ROOT_FOLDER = '/Users/digitalsecurity/.jenkins/workspace/test'
+TMP_FOLDER = "/Users/digitalsecurity/Documents/v2/.tmp"
+ROOT_FOLDER = '/Users/digitalsecurity/Documents/v2'
