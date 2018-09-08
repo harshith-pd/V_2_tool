@@ -19,6 +19,9 @@ pipeline {
             sh 'java -version'
             sh 'echo "Checking for python3"'
             sh 'python3 --version'
+            sh 'echo "Checkign for the wkhtmltopdf"'
+            sh 'wkhtmltopdf --version || echo "Please make sure the wkhtmltopdf version 0.12.5 is installed && exit 1"'
+
           }
           catch(Exception e){
             println("Error checking dependencies : ${e.message}")
