@@ -1,5 +1,5 @@
 import Constants
-import pdfkit
+import Dependencies.pdfkit as pdfkit
 import os
 def returnioscode(keys):
     htmlcode = """

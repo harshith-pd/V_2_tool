@@ -1,5 +1,5 @@
-import pdfkit
-import PyPDF2
+import Dependencies.pdfkit as pdfkit
+import Dependencies.PyPDF2 as PyPDF2
 import os
 import Constants
 

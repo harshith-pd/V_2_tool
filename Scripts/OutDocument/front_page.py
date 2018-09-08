@@ -1,4 +1,4 @@
-import pdfkit
+import Dependencies.pdfkit as pdfkit
 def return_pdf(app_name,platform):
     html_code = """
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">

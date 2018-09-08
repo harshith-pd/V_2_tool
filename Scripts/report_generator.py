@@ -4,7 +4,7 @@ import OutDocument.confidentiality_agreement as confidentiality
 import OutDocument.assessment_generation as assessment
 import OutDocument.reportSummary as report
 import sys
-import PyPDF2
+import Dependencies.PyPDF2 as PyPDF2
 import Constants
 import os
 
