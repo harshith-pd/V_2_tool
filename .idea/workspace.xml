@@ -37,12 +37,12 @@
         <counts>
           <entry key="Jenkinsfile" value="162" />
           <entry key="py" value="62" />
-          <entry key="sh" value="106" />
+          <entry key="sh" value="111" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="106" />
+          <entry key="Bash" value="111" />
           <entry key="PLAIN_TEXT" value="162" />
           <entry key="Python" value="62" />
         </counts>
@@ -72,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/checkin_script.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+            <state relative-caret-position="105">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -425,8 +425,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/checkin_script.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
