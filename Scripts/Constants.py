@@ -114,18 +114,19 @@ PDF_LIST =['pdf_related_files/firstpage.pdf', 'pdf_related_files/confidentiality
  
  
  
+ 
 ########################################## 
 APP_NAME = "Altoro-App"
 
-INPUT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_15_12_32/input"
+INPUT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/input"
 
-OUTPUT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_15_12_32/output"
+OUTPUT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/output"
 
-LOGS_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_15_12_32/logs"
+LOGS_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/logs"
 
-REPORT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_15_12_32/report"
+REPORT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/report"
 
-CONFIG_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_15_12_32/config"
+CONFIG_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/config"
 
 TEST_RUN_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run"
 

@@ -1,0 +1,22 @@
+APP_NAME = "Altoro-App"
+
+INPUT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/input"
+
+OUTPUT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/output"
+
+LOGS_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/logs"
+
+REPORT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/report"
+
+CONFIG_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/config"
+
+TEST_RUN_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run"
+
+CONFIG_ROOT_FOLDER = "/Users/digitalsecurity/Documents/v2/config"
+
+SCRIPTS_FOLDER = "/Users/digitalsecurity/Documents/v2/Scripts"
+
+TOOLS_FOLDER = "/Users/digitalsecurity/Documents/v2/Tools"
+
+TMP_FOLDER = "/Users/digitalsecurity/Documents/v2/.tmp"
+
