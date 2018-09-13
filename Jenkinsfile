@@ -37,12 +37,14 @@ pipeline {
             try{
               def test_array = ["demo.apk", "demo.ipa"]
               for (item in test_array){
+              parallel{
                  stage ("test on ${item}"){
                     sh "echo ${env.WORKSPACE}"
                     sh "echo ${item}"
                     sh "${env.WORKSPACE}/install_and_configure.sh -input_app_file=\"${env.WORKSPACE}/${item}\""
                     assert fileExists("${env.WORKSPACE}/last_run/report/assessment_report.pdf") : "Report generation failed"
                     assert readFile("${env.WORKSPACE}/last_run/report/assessment_report.pdf") : "Report generated but not readable"
+                 }
                  }
               }
             }
