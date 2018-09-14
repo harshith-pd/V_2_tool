@@ -1,6 +1,7 @@
 pipeline{
 agent any
-stages("parallel stages"){
+stages{
+stage("parallel stages"){
   parallel{
     stage("stage1"){
       steps{
@@ -13,5 +14,6 @@ stages("parallel stages"){
       }
     }
   }
+}
 }
 }
