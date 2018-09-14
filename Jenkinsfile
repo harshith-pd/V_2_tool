@@ -36,10 +36,9 @@ pipeline {
           script{
             try{
               def test_array = ["demo.apk", "demo.ipa"]
-              parallel{
+              parallel(
                 for (item in test_array){
-                 //stage ("test on ${item}"){
-                 item:{
+                 stage ("test on ${item}"){
                     sh "echo ${env.WORKSPACE}"
                     sh "echo ${item}"
                     sh "${env.WORKSPACE}/install_and_configure.sh -input_app_file=\"${env.WORKSPACE}/${item}\""
@@ -47,7 +46,7 @@ pipeline {
                     assert readFile("${env.WORKSPACE}/last_run/report/assessment_report.pdf") : "Report generated but not readable"
                  }
               }
-              }
+              )
             }
             catch(Exception e){
               println("Error running the tests : ${e.message}")
