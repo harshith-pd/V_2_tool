@@ -3,17 +3,15 @@ agent any
 stages{
 stage("parallel stages"){
   parallel{
-    stage("stage1"){
-      steps{
-        echo "stage 1"
+  script{
+    for(i=0;i<3;i++){
+      stage("stage${item}"){
+        steps{
+         echo "stage${item}"
+        }
       }
     }
-    stage("stage2"){
-      steps{
-        echo "stage 2"
-      }
     }
-  }
 }
 }
 }
