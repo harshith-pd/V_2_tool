@@ -38,7 +38,8 @@ pipeline {
               def test_array = ["demo.apk", "demo.ipa"]
               parallel{
                 for (item in test_array){
-                 stage ("test on ${item}"){
+                 //stage ("test on ${item}"){
+                 item:{
                     sh "echo ${env.WORKSPACE}"
                     sh "echo ${item}"
                     sh "${env.WORKSPACE}/install_and_configure.sh -input_app_file=\"${env.WORKSPACE}/${item}\""
