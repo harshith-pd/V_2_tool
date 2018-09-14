@@ -4,7 +4,7 @@ stages{
 stage("parallel stages"){
   parallel{
   script{
-    for(i=0;i<3;i++){
+    for(i=0;i<5;i++){
       stage("stage${item}"){
         steps{
          echo "stage${item}"
