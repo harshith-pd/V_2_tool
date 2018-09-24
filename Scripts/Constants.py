@@ -118,9 +118,9 @@ PDF_LIST =['pdf_related_files/firstpage.pdf', 'pdf_related_files/confidentiality
 ########################################## 
 APP_NAME = "Altoro-App"
 
-INPUT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/input"
+INPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/09_08_2018_16_39_03/input"
 
-OUTPUT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/output"
+OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/09_08_2018_16_39_03/output"
 
 LOGS_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/logs"
 
