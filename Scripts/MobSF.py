@@ -88,7 +88,6 @@ def try_restarting_mobsf():
         sleep(10)
     else:
         return False
-
     return verify_reachability_of_mobsf_url()
 
 def verify_reachability_of_mobsf_url():
@@ -135,7 +134,6 @@ def upload_file_for_scan():
     except Exception as error:
         print(error)
 
-
 def scan_input_file():
     post_headers = {
         'authorization': api_key
@@ -148,7 +146,6 @@ def scan_input_file():
             print (f"Failed scan the application, error message : {app_upload_request.content}")
     except Exception as error:
         print(error)
-
 
 def download_report_as_dictionary():
     post_headers = {
@@ -166,7 +163,6 @@ def download_report_as_dictionary():
     except Exception as error:
         print(error)
 
-
 def download_report_as_PDF():
     post_headers = {
         'authorization': api_key
@@ -183,7 +179,6 @@ def download_report_as_PDF():
             print(f"Failed scan the application, error message : {app_upload_request.content}")
     except Exception as error:
         print(error)
-
 
 def mobsf_server_test():
     start_mobsf_server()

@@ -78,46 +78,6 @@ clean_up_temp () {
 }
 
 #####################################################################################
-# function desc : check for java installation and the version
-# arguments : none
-# return value : none
-#####################################################################################
-check_if_java_installed() {
-   execution_output="$( java -version 2>&1 | head -n 1 )"
-   if [[ "$execution_output" = *"$error_string"* ]]
-   then
-       echo "Java is not installed on the machine or not configured to path" && handle_error "$execution_output"
-   else
-       echo "$execution_output is installed on system"
-       if [[ ( "$execution_output" = *"1.5"* ) || ( "$execution_output" = *"1.6"* ) || ( "$execution_output" = *"1.7"* ) ]]
-       then
-            handle_error "Please install java version greater than or equal to 1.8.*"
-       fi
-   fi
-}
-
-#####################################################################################
-# function desc : check for python installation and the version
-# arguments : none
-# return value : boolean, string
-#####################################################################################
-check_if_python_installed() {
-    generic_python_executables=( "python" "python3" )
-
-    for python_executable in "${generic_python_executables[@]}"
-    do
-        echo "Checking for ${python_executable}..."
-        execution_output="$( $python_executable -V 2>&1 )"
-        if [[ "$execution_output" = *"$error_string"* ]]
-        then
-            echo "${python_executable} is a pre-requisite. Its either not installed or not in path." && handle_error "$execution_output"
-        else
-            echo "$execution_output version of python is installed on system"
-        fi
-    done
-}
-
-#####################################################################################
 # function desc : get the type of the app given as input for evaluation
 # arguments : input application file
 # return value : none
@@ -225,11 +185,13 @@ create_android_app_instance_folder () {
     done
 
     latest_run_folder="${TEST_RUN_FOLDER}/$app_name/$date_time"
+
     cp -f "$app_file" "${TEST_RUN_FOLDER}/$app_name/$date_time/input/" 2>/dev/null 1>/dev/null
     cp -f "${WORKSPACE}/config/Config_$app_type.xml" "${TEST_RUN_FOLDER}/$app_name/$date_time/config/"
-    $APK_TOOL_COMMAND d -f -o "${TEST_RUN_FOLDER}/$app_name/$date_time/output/apktool" "$app_file"  2>/dev/null 1>/dev/null|| handle_error "Error running apktool jar on the apk file"
-    "$ENJARIFY_TOOL_COMMAND" "$app_file" -o "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/$app_name.jar" 2>/dev/null 1>/dev/null || handle_error "Error decompiling the apk file"
-    $JDCORE_JAR "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/$app_name.jar" "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/" 2>/dev/null 1>/dev/null || handle_error "Error decompiling app jar "
+
+    $APK_TOOL_COMMAND d -f -o "${TEST_RUN_FOLDER}/$app_name/$date_time/output/apktool" "$app_file"  || handle_error "Error running apktool jar on the apk file"
+    "$ENJARIFY_TOOL_COMMAND" "$app_file" -o "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/$app_name.jar"  || handle_error "Error decompiling the apk file"
+    $JDCORE_JAR "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/$app_name.jar" "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/"  || handle_error "Error decompiling app jar "
 }
 
 #####################################################################################
@@ -258,6 +220,7 @@ run_security_scripts_on_application () {
     cd "$current_directory"
     cp -rf "$latest_run_folder"/* "$LAST_RUN_INSTANCE"/
 }
+
 ################################## Consume options
 while [ $# -gt 0 ]
 do
@@ -280,8 +243,6 @@ do
 done
 
 clean_up_temp
-check_if_java_installed
-check_if_python_installed
 get_app_type_and_create_folders "$app_file_path"
 write_generic_folder_structure
 create_constants_file
