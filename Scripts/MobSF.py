@@ -1,6 +1,6 @@
 import requests
 from time import sleep
-import os
+import json
 import re
 
 import Constants
@@ -10,30 +10,37 @@ from HelperFunctions import *
 ##API KEY
 mobsf_latest_image = "opensecurity/mobile-security-framework-mobsf:latest"
 api_key_regex = "REST API Key: <strong><code>(.*)<\/code><\/strong>"
-api_key = ''
 container_states_tuple = ("running", "exited", "paused", "dead")
+api_key = ''
 
 #status messages
-#pull_successful = "Status: Downloaded newer"
-#already_up_to_date = "Status: Image is up to date"
+pull_successful = "Status: Downloaded newer"
+already_up_to_date = "Status: Image is up to date"
 
 ##Endpoint URLs
 mobsf_url_and_endpoints = {
-    "url": "http://localhost:8000/",
-    "api_docs_endpoint": "http://localhost:8000/api_docs",
-    "api_app_upload": "api/v1/upload",
-    "api_app_scan": "api/v1/scan",
-    "api_app_download_pdf": "api/v1/download_pdf",
-    "api_app_report_json": "api/v1/report_json"
+    'url': 'http://localhost:8000/',
+    'api_docs_endpoint': 'http://localhost:8000/api_docs',
+    'api_app_upload': 'http://localhost:8000/api/v1/upload',
+    'api_app_scan': 'http://localhost:8000/api/v1/scan',
+    'api_app_download_pdf': 'http://localhost:8000/api/v1/download_pdf',
+    'api_app_report_json': 'http://localhost:8000/api/v1/report_json'
 }
-input_file = os.listdir(Constants.INPUT_FOLDER)[0]
-report_directory = Constants.REPORT_FOLDER
 
 mobsf_container_details = {
-    'container_id': "",
-    "container_name": "mobsf_security_tool",
-    "container_state": ""
+    'container_id': '',
+    'container_name': 'mobsf_security_tool',
+    'container_state': ''
 }
+
+scan_dictionary = {
+    'scan_type': '',
+    'hash': '',
+    'file_name': ''
+}
+
+input_file = f"{Constants.INPUT_FOLDER}/{os.listdir(Constants.INPUT_FOLDER)[0]}"
+report_directory = Constants.REPORT_FOLDER
 
 ##Commands
 mobsf_image_pull_command = f"docker pull {mobsf_latest_image}"
@@ -54,9 +61,15 @@ def start_mobsf_server():
 
     try:
         if mobsf_container_details['container_id'] is "":
-            print(f"No MobSF container found, pulling & running the latest mobsf image{mobsf_latest_image}")
-            execute_shell_command(mobsf_run_container_command)
-            start_mobsf_server()
+            print(f"No MobSF container found, pulling the latest mobsf image{mobsf_latest_image}")
+            execution_output = execute_shell_command(mobsf_image_pull_command)
+            print(execution_output)
+            if (pull_successful in execution_output) or (already_up_to_date in execution_output):
+                print(f'Running the pulled MobSF image')
+                execute_shell_command(mobsf_run_container_command)
+                start_mobsf_server()
+            else:
+                print(f"Unable to pull the latest image of MobSF : {mobsf_latest_image}, please start the mobsf server manually")
         else:
              if (mobsf_container_details['container_state'] is "running") or (mobsf_container_details['container_state'] is "exited") or (mobsf_container_details['container_state'] is "paused"):
                 if try_restarting_mobsf() is True:
@@ -70,7 +83,7 @@ def start_mobsf_server():
 
 def try_restarting_mobsf():
     execution_output = execute_shell_command(f"docker container restart {mobsf_container_details['container_id']}")
-    if execution_output in mobsf_container_details['container_id']:
+    if mobsf_container_details['container_id'] in execution_output :
         print(f"Restart command issued to the container without error")
         sleep(10)
     else:
@@ -106,24 +119,75 @@ def extract_api_key_for_mobsf_remote_operations():
         print(f"{error}")
         return False
 
-
-def verify_api_test_call():
-    pass
-
 def upload_file_for_scan():
-    pass
+    post_headers = {
+        'authorization': api_key,
+    }
+    try:
+        global input_file
+        files = {'file': (os.listdir(Constants.INPUT_FOLDER)[0], open(input_file, 'rb'), 'application/octet-stream')}
+        app_upload_request = requests.post(mobsf_url_and_endpoints['api_app_upload'], files=files, headers=post_headers)
+        if app_upload_request.status_code == 200:
+            global scan_dictionary
+            scan_dictionary = json.loads(app_upload_request.content.decode('utf-8'))
+        else:
+            print(f"Failed upload application, error message : {app_upload_request.content}")
+    except Exception as error:
+        print(error)
+
 
 def scan_input_file():
-    pass
+    post_headers = {
+        'authorization': api_key
+    }
+    try:
+        app_scan_build = requests.post(mobsf_url_and_endpoints['api_app_scan'], data=scan_dictionary, headers=post_headers)
+        if app_scan_build.status_code == 200:
+            print(f"Successfully performed scan of the application")
+        else:
+            print (f"Failed scan the application, error message : {app_upload_request.content}")
+    except Exception as error:
+        print(error)
+
 
 def download_report_as_dictionary():
-    pass
+    post_headers = {
+        'authorization': api_key
+    }
+    try:
+        parameters = {'hash':scan_dictionary['hash'], 'scan_type':scan_dictionary['scan_type']}
+        app_report_json = requests.post(mobsf_url_and_endpoints['api_app_report_json'], data=parameters,
+                                       headers=post_headers)
+        if app_report_json.status_code == 200:
+            print(f"Successfully downloaded scan report of the application")
+            return json.loads(app_report_json.content.decode('utf-8'))
+        else:
+            print(f"Failed scan the application, error message : {app_upload_request.content}")
+    except Exception as error:
+        print(error)
+
 
 def download_report_as_PDF():
-    pass
+    post_headers = {
+        'authorization': api_key
+    }
+    try:
+        parameters = {'hash':scan_dictionary['hash'], 'scan_type':scan_dictionary['scan_type']}
+        app_report_pdf = requests.post(mobsf_url_and_endpoints['api_app_download_pdf'], data=parameters,
+                                       headers=post_headers)
+        if app_report_pdf.status_code == 200:
+            print(f"Successfully downloaded scan report of the application")
+            with open(f"{Constants.REPORT_FOLDER}/MobSF_Report.pdf", 'wb') as report_pdf:
+                report_pdf.write(app_report_pdf.content)
+        else:
+            print(f"Failed scan the application, error message : {app_upload_request.content}")
+    except Exception as error:
+        print(error)
 
-def clean_up():
-    pass
 
-
-extract_api_key_for_mobsf_remote_operations()
+def mobsf_server_test():
+    start_mobsf_server()
+    extract_api_key_for_mobsf_remote_operations()
+    upload_file_for_scan()
+    scan_input_file()
+    download_report_as_PDF()

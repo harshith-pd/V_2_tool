@@ -5,6 +5,7 @@ from ClassTestComponents import TestComponents
 from Info_Plist_Tests import *
 from OTool_Tests import *
 from report_generator import *
+from MobSF import *
 
 logging_directory = Constants.LOGS_FOLDER
 
@@ -38,3 +39,4 @@ for test_name in config_xml_dict.keys():
 
 
 generate_report(config_xml_dict,"iOS")
+mobsf_server_test()

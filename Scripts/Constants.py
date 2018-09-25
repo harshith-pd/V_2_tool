@@ -124,7 +124,7 @@ OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/09_
 
 LOGS_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/logs"
 
-REPORT_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/report"
+REPORT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/09_08_2018_16_39_03/report"
 
 CONFIG_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/config"
 
@@ -137,4 +137,5 @@ SCRIPTS_FOLDER = "/Users/digitalsecurity/Documents/v2/Scripts"
 TOOLS_FOLDER = "/Users/digitalsecurity/Documents/v2/Tools"
 
 TMP_FOLDER = "/Users/digitalsecurity/Documents/v2/.tmp"
+
 ROOT_FOLDER = '/Users/digitalsecurity/Documents/v2'

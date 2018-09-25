@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="836c4fd7-d344-4760-a0c4-68f1beae7a2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/v2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/v2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/HelperFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/HelperFunctions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkin_script.sh" beforeDir="false" afterPath="$PROJECT_DIR$/checkin_script.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Main_iOS.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Main_iOS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/MobSF.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/MobSF.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,24 +60,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4710" />
+          <entry key="py" value="6272" />
           <entry key="sh" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="5" />
-          <entry key="Python" value="4710" />
+          <entry key="Python" value="6272" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="8" />
+          <entry key="py" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="8" />
+          <entry key="Python" value="12" />
         </counts>
       </usages-collector>
     </session>
@@ -89,58 +87,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Scripts/MobSF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="216">
+              <caret line="188" column="24" lean-forward="true" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1537823448000" expanded="true" signature="2726:3080" ph="..." />
-                <marker date="1537823448000" expanded="true" signature="3128:3549" ph="..." />
-                <marker date="1537823448000" expanded="true" signature="3600:4214" ph="..." />
-                <marker date="1537823448000" expanded="true" signature="4312:4323" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/HelperFunctions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="62" column="68" lean-forward="true" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/AppUnzipTests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1084">
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/Constants.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="122" column="56" selection-start-line="122" selection-start-column="56" selection-end-line="122" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/Main_iOS.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="5" selection-start-line="25" selection-end-line="26" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <marker date="1537898597000" expanded="true" signature="3341:3696" ph="..." />
+                <marker date="1537898597000" expanded="true" signature="3744:4165" ph="..." />
+                <marker date="1537898597000" expanded="true" signature="5071:5524" ph="..." />
+                <marker date="1537898597000" expanded="true" signature="5546:6020" ph="..." />
+                <marker date="1537898597000" expanded="true" signature="6056:6747" ph="..." />
               </folding>
             </state>
           </provider>
@@ -164,11 +119,17 @@
       <find>Unable to write to destination</find>
       <find>logging.info</find>
       <find>&quot;container_id&quot;</find>
+      <find>&quot;</find>
+      <find>throw</find>
+      <find>raise</find>
+      <find>app_report_json</find>
       <find>execute</find>
     </findStrings>
     <replaceStrings>
       <replace>print</replace>
       <replace>'container_id'</replace>
+      <replace>'</replace>
+      <replace>app_report_pdf</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -188,10 +149,12 @@
         <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/checkin_script.sh" />
         <option value="$PROJECT_DIR$/MobSF.py" />
-        <option value="$PROJECT_DIR$/Scripts/Constants.py" />
         <option value="$PROJECT_DIR$/Scripts/DockerContainer.py" />
         <option value="$PROJECT_DIR$/Scripts/HelperFunctions.py" />
+        <option value="$PROJECT_DIR$/Scripts/Main_iOS.py" />
+        <option value="$PROJECT_DIR$/Scripts/test.py" />
         <option value="$PROJECT_DIR$/Scripts/MobSF.py" />
+        <option value="$PROJECT_DIR$/Scripts/Constants.py" />
       </list>
     </option>
   </component>
@@ -218,6 +181,32 @@
               <item name="tool_v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tool_v2" type="462c0819:PsiDirectoryNode" />
               <item name="Scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tool_v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tool_v2" type="462c0819:PsiDirectoryNode" />
+              <item name="test_run" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tool_v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tool_v2" type="462c0819:PsiDirectoryNode" />
+              <item name="test_run" type="462c0819:PsiDirectoryNode" />
+              <item name="Altoro-App" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tool_v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tool_v2" type="462c0819:PsiDirectoryNode" />
+              <item name="test_run" type="462c0819:PsiDirectoryNode" />
+              <item name="Altoro-App" type="462c0819:PsiDirectoryNode" />
+              <item name="09_08_2018_16_39_03" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tool_v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tool_v2" type="462c0819:PsiDirectoryNode" />
+              <item name="test_run" type="462c0819:PsiDirectoryNode" />
+              <item name="Altoro-App" type="462c0819:PsiDirectoryNode" />
+              <item name="09_08_2018_16_39_03" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -246,7 +235,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.MobSF">
+  <component name="RunManager" selected="Python.test">
     <configuration name="DockerContainer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="v2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -331,14 +320,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Main_Android" />
       <item itemvalue="Python.Main_iOS" />
       <item itemvalue="Python.MobSF" />
       <item itemvalue="Python.DockerContainer" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.MobSF" />
         <item itemvalue="Python.DockerContainer" />
         <item itemvalue="Python.Main_iOS" />
@@ -363,12 +375,12 @@
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2536349" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3306321" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32901135" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3306321" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -384,7 +396,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2536349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -394,7 +406,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32901135" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32901135" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -510,23 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/Main_iOS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="5" selection-start-line="25" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/Constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="122" column="56" selection-start-line="122" selection-start-column="56" selection-end-line="122" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/DockerContainer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -541,13 +536,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/HelperFunctions.py">
+    <entry file="file://$PROJECT_DIR$/Scripts/ClassTestComponents.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="62" column="68" lean-forward="true" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/DexToJar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/Main_iOS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="41" column="19" selection-start-line="41" selection-end-line="41" selection-end-column="19" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/Constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
         </state>
       </provider>
     </entry>
@@ -560,16 +579,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/HelperFunctions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="62" column="68" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/MobSF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        <state relative-caret-position="216">
+          <caret line="188" column="24" lean-forward="true" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1537823448000" expanded="true" signature="2726:3080" ph="..." />
-            <marker date="1537823448000" expanded="true" signature="3128:3549" ph="..." />
-            <marker date="1537823448000" expanded="true" signature="3600:4214" ph="..." />
-            <marker date="1537823448000" expanded="true" signature="4312:4323" ph="..." />
+            <marker date="1537898597000" expanded="true" signature="3341:3696" ph="..." />
+            <marker date="1537898597000" expanded="true" signature="3744:4165" ph="..." />
+            <marker date="1537898597000" expanded="true" signature="5071:5524" ph="..." />
+            <marker date="1537898597000" expanded="true" signature="5546:6020" ph="..." />
+            <marker date="1537898597000" expanded="true" signature="6056:6747" ph="..." />
           </folding>
         </state>
       </provider>
