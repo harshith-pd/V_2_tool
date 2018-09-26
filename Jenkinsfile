@@ -34,11 +34,12 @@ pipeline {
       steps{
           script{
             try{
-              def test_apps_array = []
               def rootPath = "${env.WORKSPACE}/test_apps"
-              for (subPath in rootPath.list()) {
-                    test_apps_array << subPath.getName()
-                }
+              def app_list_file = "${env.WORKSPACE}/app_files.txt"
+
+              sh "ls $rootPath > $app_list_file"
+              def test_apps_array = readFile( "$app_list_file" ).split( "\\r?\\n" );
+              sh "rm -f $app_list_file"
                 for (item in test_apps_array){
                  stage ("test on ${item}"){
                     sh "echo ${env.WORKSPACE}"
