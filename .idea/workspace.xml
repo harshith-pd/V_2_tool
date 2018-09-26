@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="836c4fd7-d344-4760-a0c4-68f1beae7a2f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install_and_configure.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install_and_configure.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.ipa" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +59,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Jenkinsfile" value="58" />
+          <entry key="Jenkinsfile" value="136" />
           <entry key="py" value="6306" />
           <entry key="sh" value="41" />
         </counts>
@@ -66,7 +67,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="41" />
-          <entry key="PLAIN_TEXT" value="58" />
+          <entry key="PLAIN_TEXT" value="136" />
           <entry key="Python" value="6306" />
         </counts>
       </usages-collector>
@@ -90,7 +91,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/install_and_configure.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
@@ -116,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+            <state relative-caret-position="267">
+              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -183,12 +184,14 @@
       <find>execute</find>
       <find>decom</find>
       <find>app_name</find>
+      <find>${env.WORKSPACE}/${item}</find>
     </findStrings>
     <replaceStrings>
       <replace>print</replace>
       <replace>'container_id'</replace>
       <replace>'</replace>
       <replace>app_report_pdf</replace>
+      <replace>${env.WORKSPACE}/test_apps/${item}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -213,8 +216,8 @@
         <option value="$PROJECT_DIR$/Scripts/Constants.py" />
         <option value="$PROJECT_DIR$/Scripts/Main_Android.py" />
         <option value="$PROJECT_DIR$/Scripts/MobSF.py" />
-        <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/install_and_configure.sh" />
+        <option value="$PROJECT_DIR$/Jenkinsfile" />
       </list>
     </option>
   </component>
@@ -642,17 +645,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/install_and_configure.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="222" column="62" selection-start-line="222" selection-start-column="62" selection-end-line="222" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
         </state>
       </provider>
     </entry>
