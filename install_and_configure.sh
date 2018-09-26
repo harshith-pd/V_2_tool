@@ -219,8 +219,8 @@ run_security_scripts_on_application () {
     cd "${WORKSPACE}/Scripts"
     python3 Main_"$app_type".py || handle_error "Failure to run the Main script for security tests"
     cd "$current_directory"
-    mkdir -p "$LAST_RUN_INSTANCE"/"$app"
-    cp -rf "$latest_run_folder"/* "$LAST_RUN_INSTANCE"/"$app"/
+    mkdir -p "$LAST_RUN_INSTANCE"/"$app_name"
+    cp -rf "$latest_run_folder"/* "$LAST_RUN_INSTANCE"/"$app_name"/
 }
 
 ################################## Consume options
