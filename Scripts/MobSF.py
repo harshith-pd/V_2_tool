@@ -19,12 +19,12 @@ already_up_to_date = "Status: Image is up to date"
 
 ##Endpoint URLs
 mobsf_url_and_endpoints = {
-    'url': 'http://localhost:8000/',
-    'api_docs_endpoint': 'http://localhost:8000/api_docs',
-    'api_app_upload': 'http://localhost:8000/api/v1/upload',
-    'api_app_scan': 'http://localhost:8000/api/v1/scan',
-    'api_app_download_pdf': 'http://localhost:8000/api/v1/download_pdf',
-    'api_app_report_json': 'http://localhost:8000/api/v1/report_json'
+    'url': 'http://127.0.0.1:8000/',
+    'api_docs_endpoint': 'http://127.0.0.1:8000/api_docs',
+    'api_app_upload': 'http://127.0.0.1:8000/api/v1/upload',
+    'api_app_scan': 'http://127.0.0.1:8000/api/v1/scan',
+    'api_app_download_pdf': 'http://127.0.0.1:8000/api/v1/download_pdf',
+    'api_app_report_json': 'http://127.0.0.1:8000/api/v1/report_json'
 }
 
 mobsf_container_details = {

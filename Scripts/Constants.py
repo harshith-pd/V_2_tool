@@ -119,20 +119,21 @@ PDF_LIST =['pdf_related_files/firstpage.pdf', 'pdf_related_files/confidentiality
  
  
  
+ 
 ########################################## 
 APP_NAME = "com.ibm.android.analyzer.test"
 
-INPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/input"
+INPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/input"
 
-APKTOOL_OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/output/apktool"
+APKTOOL_OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/output/apktool"
 
-ENJARIFY_OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/output/enjarify"
+ENJARIFY_OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/output/enjarify"
 
-LOGS_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/logs"
+LOGS_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/logs"
 
-REPORT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/report"
+REPORT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/report"
 
-CONFIG_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/config"
+CONFIG_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/config"
 
 TEST_RUN_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run"
 
