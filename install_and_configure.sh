@@ -31,7 +31,7 @@
 #     usage="$(basename "$0") -input_app_file=<input file location> -input_source_code=<input source code>"
      usage="$(basename "$0") -input_app_file=<input file location>"
 
-     #WORKSPACE=$( dirname $(dirname "$(pwd)/$0") )
+     WORKSPACE=$( dirname $(dirname "$(pwd)/$0") )
      echo $WORKSPACE
      TMP_FOLDER_LOCATION="${WORKSPACE}/.tmp"
      SCRIPTS_FOLDER="${WORKSPACE}/Scripts"
@@ -190,8 +190,8 @@ create_android_app_instance_folder () {
     cp -f "${WORKSPACE}/config/Config_$app_type.xml" "${TEST_RUN_FOLDER}/$app_name/$date_time/config/"
 
     $APK_TOOL_COMMAND d -f -o "${TEST_RUN_FOLDER}/$app_name/$date_time/output/apktool" "$app_file"  || handle_error "Error running apktool jar on the apk file"
-    "$ENJARIFY_TOOL_COMMAND" "$app_file" -o "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/$app_name.jar"  || handle_error "Error decompiling the apk file"
-    $JDCORE_JAR "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/$app_name.jar" "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/"  || handle_error "Error decompiling app jar "
+    "$ENJARIFY_TOOL_COMMAND" "$app_file" -o "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/$app_name.jar" 2>/dev/null 1>/dev/null  || handle_error "Error decompiling the apk file"
+    $JDCORE_JAR "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/$app_name.jar" "${TEST_RUN_FOLDER}/$app_name/$date_time/output/enjarify/" 2>/dev/null 1>/dev/null || handle_error "Error decompiling app jar "
 }
 
 #####################################################################################

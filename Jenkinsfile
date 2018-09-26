@@ -43,6 +43,11 @@ pipeline {
                     assert fileExists("${env.WORKSPACE}/last_run/report/assessment_report.pdf") : "Report generation failed"
                     assert readFile("${env.WORKSPACE}/last_run/report/assessment_report.pdf") : "Report generated but not readable"
                  }
+                post {
+                   always {
+                        archiveArtifacts artifacts: 'last_run/report/**/*', fingerprint: true
+                    }
+                  }
               }
             }
             catch(Exception e){
@@ -54,9 +59,5 @@ pipeline {
 //////////////////////////////////////////////////////////////////////////////////////////
   }
 //////////////////////////////////////////////////////////////////////////////////////////
-    post {
-            always {
-                archiveArtifacts artifacts: 'last_run/report/**/*', fingerprint: true
-            }
-        }
+
 }

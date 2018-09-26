@@ -173,7 +173,7 @@ def download_report_as_PDF():
                                        headers=post_headers)
         if app_report_pdf.status_code == 200:
             print(f"Successfully downloaded scan report of the application")
-            with open(f"{Constants.REPORT_FOLDER}/MobSF_Report.pdf", 'wb') as report_pdf:
+            with open(f"{Constants.REPORT_FOLDER}/MobSF_Detailed_Report.pdf", 'wb') as report_pdf:
                 report_pdf.write(app_report_pdf.content)
         else:
             print(f"Failed scan the application, error message : {app_upload_request.content}")

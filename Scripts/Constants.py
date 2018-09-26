@@ -115,27 +115,32 @@ PDF_LIST =['pdf_related_files/firstpage.pdf', 'pdf_related_files/confidentiality
  
  
  
+ 
+ 
+ 
+ 
 ########################################## 
-APP_NAME = "Altoro-App"
+APP_NAME = "com.ibm.android.analyzer.test"
 
-INPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/09_08_2018_16_39_03/input"
+INPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/input"
 
-OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/09_08_2018_16_39_03/output"
+APKTOOL_OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/output/apktool"
 
-LOGS_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/logs"
+ENJARIFY_OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/output/enjarify"
 
-REPORT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/09_08_2018_16_39_03/report"
+LOGS_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/logs"
 
-CONFIG_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run/Altoro-App/09_08_2018_16_39_03/config"
+REPORT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/report"
 
-TEST_RUN_FOLDER = "/Users/digitalsecurity/Documents/v2/test_run"
+CONFIG_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_09_23/config"
 
-CONFIG_ROOT_FOLDER = "/Users/digitalsecurity/Documents/v2/config"
+TEST_RUN_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run"
 
-SCRIPTS_FOLDER = "/Users/digitalsecurity/Documents/v2/Scripts"
+CONFIG_ROOT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/config"
 
-TOOLS_FOLDER = "/Users/digitalsecurity/Documents/v2/Tools"
+SCRIPTS_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/Scripts"
 
-TMP_FOLDER = "/Users/digitalsecurity/Documents/v2/.tmp"
+TOOLS_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/Tools"
 
-ROOT_FOLDER = '/Users/digitalsecurity/Documents/v2'
+TMP_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/.tmp"
+ROOT_FOLDER = '/Users/harshith/PycharmProjects/tool_v2'

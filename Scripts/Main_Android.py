@@ -4,6 +4,7 @@ from HelperFunctions import *
 from ClassTestComponents import TestComponents
 from AppUnzipTests import *
 from report_generator import *
+from MobSF import *
 
 logging_directory = Constants.LOGS_FOLDER
 
@@ -31,4 +32,4 @@ for test_name in config_xml_dict.keys():
     logging.info("*****************//////////********************")
 
 generate_report(config_xml_dict,"Android")
-
+mobsf_server_test()
