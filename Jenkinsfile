@@ -44,7 +44,7 @@ pipeline {
                     assert readFile("${env.WORKSPACE}/last_run/report/assessment_report.pdf") : "Report generated but not readable"
                  }
                 stage ("Archive artifacts for ${item}") {
-                        archiveArtifacts artifacts: 'last_run/report/**/*', fingerprint: true
+                        archiveArtifacts artifacts: 'last_run/**/report/**/*', fingerprint: true
                   }
               }
             }

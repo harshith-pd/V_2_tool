@@ -47,6 +47,7 @@
      app_file_path=""
      app_source_code_path=""
      app_type=""
+     app_name=""
 
      latest_run_folder=''
 ## folder structures
@@ -218,7 +219,8 @@ run_security_scripts_on_application () {
     cd "${WORKSPACE}/Scripts"
     python3 Main_"$app_type".py || handle_error "Failure to run the Main script for security tests"
     cd "$current_directory"
-    cp -rf "$latest_run_folder"/* "$LAST_RUN_INSTANCE"/
+    mkdir -p "$LAST_RUN_INSTANCE"/"$app"
+    cp -rf "$latest_run_folder"/* "$LAST_RUN_INSTANCE"/"$app"/
 }
 
 ################################## Consume options
