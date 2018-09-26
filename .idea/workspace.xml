@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="836c4fd7-d344-4760-a0c4-68f1beae7a2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Main_Android.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Main_Android.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/MobSF.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/MobSF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/OutDocument/temp.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/OutDocument/temp.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install_and_configure.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install_and_configure.sh" afterDir="false" />
-    </list>
+    <list default="true" id="836c4fd7-d344-4760-a0c4-68f1beae7a2f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scripts/MobSF.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -121,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+            <state relative-caret-position="235">
+              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -245,32 +237,6 @@
               <item name="tool_v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tool_v2" type="462c0819:PsiDirectoryNode" />
               <item name="Scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tool_v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tool_v2" type="462c0819:PsiDirectoryNode" />
-              <item name="test_run" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tool_v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tool_v2" type="462c0819:PsiDirectoryNode" />
-              <item name="test_run" type="462c0819:PsiDirectoryNode" />
-              <item name="Altoro-App" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tool_v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tool_v2" type="462c0819:PsiDirectoryNode" />
-              <item name="test_run" type="462c0819:PsiDirectoryNode" />
-              <item name="Altoro-App" type="462c0819:PsiDirectoryNode" />
-              <item name="09_26_2018_12_04_57" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tool_v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tool_v2" type="462c0819:PsiDirectoryNode" />
-              <item name="test_run" type="462c0819:PsiDirectoryNode" />
-              <item name="Altoro-App" type="462c0819:PsiDirectoryNode" />
-              <item name="09_26_2018_12_04_57" type="462c0819:PsiDirectoryNode" />
-              <item name="report" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -637,13 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/Main_iOS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
@@ -683,6 +642,13 @@
             <marker date="1537944513000" expanded="true" signature="5544:6017" ph="..." />
             <marker date="1537944513000" expanded="true" signature="6053:6743" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="35" />
         </state>
       </provider>
     </entry>
