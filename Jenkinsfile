@@ -42,12 +42,10 @@ pipeline {
                     sh "${env.WORKSPACE}/install_and_configure.sh -input_app_file=\"${env.WORKSPACE}/${item}\""
                     assert fileExists("${env.WORKSPACE}/last_run/report/assessment_report.pdf") : "Report generation failed"
                     assert readFile("${env.WORKSPACE}/last_run/report/assessment_report.pdf") : "Report generated but not readable"
-                post {
-                   always {
+                 }
+                stage ("Archive artifacts for ${item}") {
                         archiveArtifacts artifacts: 'last_run/report/**/*', fingerprint: true
-                    }
                   }
-                }
               }
             }
             catch(Exception e){
