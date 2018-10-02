@@ -231,9 +231,13 @@ do
       app_file_path="${1#*=}"
         if [ ! -f "$app_file_path" ]
         then
-            handle_error "Please provide a valid application file path"
+            app_file_path="${WORKSPACE}/$app_file_path"
+            if [ ! -f "$app_file_path" ]
+            then
+                handle_error "Please provide a valid application file path"
+            fi
         fi
-        echo "Found input file $app_file..."
+        echo "Found input file $app_file_path..."
     ;;
     *)
       echo "***************************\n"
