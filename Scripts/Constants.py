@@ -120,20 +120,23 @@ PDF_LIST =['pdf_related_files/firstpage.pdf', 'pdf_related_files/confidentiality
  
  
  
+ 
+ 
+ 
+ 
+ 
 ########################################## 
-APP_NAME = "com.ibm.android.analyzer.test"
+APP_NAME = "Altoro-App"
 
-INPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/input"
+INPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/10_09_2018_17_43_53/input"
 
-APKTOOL_OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/output/apktool"
+OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/10_09_2018_17_43_53/output"
 
-ENJARIFY_OUTPUT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/output/enjarify"
+LOGS_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/10_09_2018_17_43_53/logs"
 
-LOGS_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/logs"
+REPORT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/10_09_2018_17_43_53/report"
 
-REPORT_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/report"
-
-CONFIG_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/com.ibm.android.analyzer.test/09_26_2018_12_35_54/config"
+CONFIG_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run/Altoro-App/10_09_2018_17_43_53/config"
 
 TEST_RUN_FOLDER = "/Users/harshith/PycharmProjects/tool_v2/test_run"
 
