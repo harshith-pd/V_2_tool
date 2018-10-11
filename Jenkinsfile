@@ -48,7 +48,7 @@ pipeline {
                  stage ("test on ${item}"){
                     sh "echo ${env.WORKSPACE}"
                     sh "echo ${item}"
-                    sh "${env.WORKSPACE}/install_and_configure.sh -input_app_file=\"${env.WORKSPACE}/test_apps/${item}\""
+                    sh "${env.WORKSPACE}/install_and_configure.sh -input_app_file=\"test_apps/${item}\""
                     //assert fileExists("${env.WORKSPACE}/last_run/report/assessment_report.pdf") : "Report generation failed"
                     //assert readFile("${env.WORKSPACE}/last_run/report/assessment_report.pdf") : "Report generated but not readable"
                  }
