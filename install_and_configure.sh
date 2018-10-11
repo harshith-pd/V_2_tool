@@ -234,6 +234,7 @@ do
         if [ ! -f "$app_file_path" ]
         then
             app_file_path="${WORKSPACE}/$app_file_path"
+            echo $app_file_path
             if [ ! -f "$app_file_path" ]
             then
                 handle_error "Please provide a valid application file path"
