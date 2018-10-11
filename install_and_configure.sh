@@ -224,6 +224,7 @@ run_security_scripts_on_application () {
 }
 
 ################################## Consume options
+cd
 while [ $# -gt 0 ]
 do
   case "$1" in
