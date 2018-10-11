@@ -31,7 +31,7 @@
 #     usage="$(basename "$0") -input_app_file=<input file location> -input_source_code=<input source code>"
      usage="$(basename "$0") -input_app_file=<input file location>"
 
-     WORKSPACE=$( dirname $(dirname "$(pwd)/$0") )
+    # WORKSPACE=$( dirname $(dirname "$(pwd)/$0") )
      echo $WORKSPACE
      TMP_FOLDER_LOCATION="${WORKSPACE}/.tmp"
      SCRIPTS_FOLDER="${WORKSPACE}/Scripts"
